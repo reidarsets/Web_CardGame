@@ -1,0 +1,287 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap');
+@font-face {
+  font-family: gwent;
+  src: url(../assets/font/hinted-GWENT-ExtraBold.ttf)
+ }
+
+* {
+  font-family: gwent;
+}
+
+body{
+  background: url(/assets/images/Background/GameBackground.jpeg)  center center fixed;
+  background-size: cover;
+}
+/*                            COIN                            */
+/* ========================================================== */
+.coin {
+  position: fixed;
+  right: 20px;
+  top: 45%;
+
+  width: 80px;
+  height: 80px;
+
+  transition: all 2s;
+  -o-transition: all 2s;
+  -webkit-transition: all 2s;
+  -moz-transition: all 2s;
+
+  background-image: url("../assets/images/CoinPlayer.png");
+  background-size: 100%;
+
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+
+  border-radius: 50%;
+}
+.coin:hover {
+  
+  transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+}
+
+.enemy_coin {
+  transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+
+  width: 80px;
+  height: 80px;
+
+  transition: all 2s;
+  -o-transition: all 2s;
+  -webkit-transition: all 2s;
+  -moz-transition: all 2s;
+
+  background-size: 100%;
+  background-image: url("../assets/images/CoinOponent.png");
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+/* ========================================================== */
+
+/*                            CARD                            */
+/* ========================================================== */
+.card {
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  width: 150px;
+  height: 220px;
+
+  transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+
+  background-size: 100%;
+  border-radius: 5px;
+  position: relative;
+  background-image: url("../assets/images/Characters/Avengers.png");
+  justify-content: center;
+  text-align: center;
+}
+
+.hand .card:hover {
+  width: calc(150px +10%); 
+  height: calc(220px +10%); 
+  bottom: 65px; 
+  background-size: contain;
+  z-index: 2;
+}
+
+.hand {
+  height: 155px;
+  position: fixed;
+  bottom: 10px;
+  left: calc(50% - 7*(150px+5)/2);
+  display: flex;
+  gap: 5px;
+  transition: 0.5s linear;
+  z-index: 1;
+}
+
+.handUp .card{width:100px; height: 147px;}
+.handUp {
+  height: 50px;
+  position: fixed;
+  top: 5px;
+  left: calc(50% - 7*(100px+5)/2);
+  display: flex;
+  gap: 5px;
+}
+
+.handUp1{
+  position: fixed;
+  bottom: 320px;
+  left: calc(50% - 3*(150px+5)/2);
+  display: flex;
+  gap: 5px;
+}
+
+.handUp2{
+  position: fixed;
+  top: 320px;
+  left: calc(50% - 3*(150px+5)/2);
+  display: flex;
+  gap: 5px;
+}
+
+ img{
+   width: 150px;
+   height: 150px;
+   object-fit: cover;
+   object-position: 0 0;
+   border-radius: 100px;
+ }
+
+ .SteckC .card{
+   position: fixed;
+   top: calc(50% - 150px/2);
+ }
+
+ #playerField {
+  position: relative;
+  width: 99%;
+  height: 20%;
+  top: 42em;
+  display: inline-flex;
+  gap: 5px;
+  justify-content: center;
+  text-align: center;
+}
+/* ===================Background for game==================== */
+
+
+
+/* ===========================AVA============================= */
+
+ #you{
+   width: 120px;
+   height: 120px;
+   position: fixed;
+   bottom: 180px;
+   right: calc(50% - 150px/2);
+   z-index: 0;
+ }
+
+ #enemy{
+  width: 120px;
+  height: 120px;
+  position: fixed;
+  top: 160px;
+  right: calc(50% - 150px/2);
+}
+
+/* -------------------------------Login--------------------------------- */
+
+#Ylogin{
+  width: 300px;
+  text-align: end;
+  color: #fff;
+  text-shadow: 1px 1px 2px black, 0 0 1em black;
+  position: fixed;
+  bottom: 180px;
+  left: calc(50% - 350px);
+  font-size: 1.5em;
+}
+
+#Elogin{
+  width: 300px;
+  text-align: end;
+  color: #fff;
+  text-shadow: 1px 1px 2px black, 0 0 1em black;
+  position: fixed;
+  top: 170px;
+  left: calc(50% - 350px);
+  font-size: 1.5em;
+}
+
+.stone img{
+  width: 65px;
+  height: 65px;
+}
+
+#YourStone{
+  position: fixed;
+  bottom: 180px;
+  right: calc(50% - 510px);
+}
+
+#EnemyStone{
+  position: fixed;
+  top: 170px;
+  right: calc(50% - 510px);
+}
+
+.DeStone{
+  opacity: 0.2;
+  filter: grayscale(100%);
+}
+
+#myProgress {
+  transform: rotate(-90deg);
+  position: fixed;
+  top: 47.5%;
+  right: 1px;
+  width: 600px;
+  background-color: none;
+  justify-content: center;
+}
+
+#myBar {
+  transition: 0.5s linear;
+  margin: auto;
+  justify-content: center;
+  width: 0%;
+  height: 30px;
+  background-color: green;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* -----------------------------finish----------------------------------- */
+#finish{
+  
+  position: fixed;
+  bottom: 175px;
+  left: calc(50% - 25px/2 + 50px);
+  z-index: 2;
+}
+
+#finish input{
+  transition: all 0.2s;
+  width: 40px;
+  height: 40px;
+  color:rgba(0, 0, 0, 0.891);
+  border-radius: 100px;
+  font-size:32px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.476);
+  text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(255, 255, 255);
+  
+}
+
+#finish input:hover{
+  color: rgb(165, 64, 47);
+}
+
+#num{
+  color: #fff;
+  font-size:26px;
+  margin: 48px 109px auto 0;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(0, 0, 0);
+}

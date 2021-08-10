@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(U)GWENT</title>
+    <link rel="stylesheet" href="style/startscreen.css">
+    <script src="js/startscreen.js"></script>
+</head>
+
+<body>
+    <div id="main_container">
+        <div id="login" class="form_container">
+            <form action="" method="POST" onsubmit="return processLogin();">
+                <input required type="text" name="username" placeholder="Login">
+                <input required type="password" name="password" placeholder="Password">
+            
+                <button type="submit" name="transit" value="authorization">Log in</button>
+            </form>
+            <button type="button" onclick="transit('login', 'registration');">Create account</button>
+            <button type="button" onclick="transit('login', 'remind');" class="remind">Forgot a password?</button>
+        </div>
+
+        <div id="registration" class="form_container">
+            <form action="" method="POST" onsubmit="return processRegistration();">
+                <input required type="text" name="username" placeholder="Login">
+                <input required type="password" name="password" placeholder="Password">
+                <input required type="password" name="confirm" placeholder="Confirm password">
+                <input required type="text" name="name" placeholder="Full name">
+                <input required type="email" name="email" placeholder="Email">
+        
+                <button type="submit" name="transit" value="authorization">Sign up</button>
+            </form>
+            <button onclick="transit('registration', 'login');">Back</button>
+            <button type="button" onclick="transit('registration', 'remind');" class="remind">Forgot a password?</button>
+        </div>
+
+        <div id="remind" class="form_container">
+            <form action="" method="POST" onsubmit="return processRemind();">
+                <input required type="text" name="username" placeholder="Login">
+            
+                <button type="submit">Send a password</button>
+            </form>
+            <button type="button" onclick="transit('remind', 'login');">Back</button>
+        </div>
+
+        <p id="perror" class="error"></p>
+    </div>
+</body>
+
+</html>

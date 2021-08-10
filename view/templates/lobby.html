@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/lobby.css">
+</head>
+<body>
+
+    <div id="info">
+      <h3 id="name">log</h3>
+      <div style="display: flex; justify-content: center;">
+          <div>Win: <div id="wins">12</div></div>
+          <div>Defeat: <div id="loses">12</div></div>
+          
+      </div>
+  </div>
+  <form action="" method="POST">
+    <button id="logout" name="transit" value="exit">Log out</button>
+  </form>
+    <form id="startGame" action="" method="POST" onsubmit="return findOponent();">
+      
+        <div id="molot">
+          <input type="submit" value="START">
+          <img src="assets/images/molot.png" alt="">
+        </div>
+
+
+       <div id="chose_hero">
+          <label>
+            <input type="radio" name="fb" value="small" />
+            <img class='gif' src="assets/images/Thanos.gif">
+          </label>  
+          <label>
+            <input type="radio" name="fb" value="small" />
+            <img class='gif' src="assets/images/Natasha.gif">
+          </label>  
+          <label>
+            <input type="radio" name="fb" value="small" />
+            <img class='gif' src="assets/images/Bolt.gif">
+          </label>  
+        </div>
+    <div id="des"></div>
+    </form>
+    
+    <script src="js/lobby.js"></script>
+    
+</body>
+</html>

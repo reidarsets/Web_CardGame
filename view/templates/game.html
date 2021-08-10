@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Card Game">
+  <link rel="stylesheet" href="style/style.css">
+  <script src="js/GameClasses.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/start_game.js"></script>
+</head>
+
+<body onload="start_game()">
+  <div id="myProgress">
+    <div id="myBar"></div>
+  </div>
+
+  <div class="coin" id="coinFace">
+    <div class="enemy_coin" id="coinBack"></div>
+  </div>
+
+  <div id="playerHand" class="hand"></div>
+
+  <img id="enemy" src="assets/images/Natasha.gif" alt="">
+
+  <div id="Elogin">
+    <div id="ename">Login enemy</div>
+    <div id="ehp">HP: 18/20</div>
+  </div>
+  
+  <div id="Ylogin">
+    <div id="pname">Your login</div>
+    <div id="php">HP: 18/20</div>
+  </div>
+
+
+  <img id="you" src="assets/images/3.gif" alt="">
+  <div id="oponentHand" class="handUp"></div>
+
+  <div class="SteckC"></div>
+  
+  <form id="finish" action="" method="POST" onsubmit="return checkGame()">
+    <input type="submit" value="X" onclick="surrender()">
+  </form>
+
+  <div id="YourStone">
+    <div id="stone2" class="stone">
+      <img src="assets/images/stone/1.png" alt="">
+      <img src="assets/images/stone/2.png" alt="">
+      <img src="assets/images/stone/3.png" alt="">
+      <img src="assets/images/stone/4.png" alt="">
+      <img src="assets/images/stone/5.png" alt="">
+      <img src="assets/images/stone/6.png" alt="">
+    </div>
+  </div>
+
+  <div id="EnemyStone">
+    <div id="stone1" class="stone">
+      <img src="assets/images/stone/1.png" alt="">
+      <img src="assets/images/stone/2.png" alt="">
+      <img src="assets/images/stone/3.png" alt="">
+      <img src="assets/images/stone/4.png" alt="">
+      <img src="assets/images/stone/5.png" alt="">
+      <img src="assets/images/stone/6.png" alt="">
+    </div>
+  </div>
+
+  <div id="playerField" class="handUp1"></div>
+  <div id="oponentField" class="handUp2"></div>
+
+  <script src="js/time.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/move_card.js"></script>
+  <script src="js/end_turn.js"></script>
+
+</body>
+
+</html>
